@@ -7,21 +7,21 @@ import java.util.Objects;
  * @version 1.0.0
  * @since 1.0.0
  */
-public class Company {
+public class Worker {
     private Long id;
     private String name;
     private String address;
     private String phoneNumber;
     private String email;
-    private String description;
+    private Summary summary;
 
-    public Company(Long id, String name, String address, String phoneNumber, String email, String description) {
+    public Worker(Long id, String name, String address, String phoneNumber, String email, Summary summary) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.description = description;
+        this.summary = summary;
     }
 
     public Long getId() {
@@ -64,40 +64,41 @@ public class Company {
         this.email = email;
     }
 
-    public String getDescription() {
-        return description;
+    public Summary getSummary() {
+        return summary;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSummary(Summary summary) {
+        this.summary = summary;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Company)) return false;
-        Company company = (Company) o;
-        return Objects.equals(id, company.id) &&
-            Objects.equals(name, company.name) &&
-            Objects.equals(address, company.address) &&
-            Objects.equals(phoneNumber, company.phoneNumber) &&
-            Objects.equals(email, company.email) &&
-            Objects.equals(description, company.description);
+        if (!(o instanceof Worker)) return false;
+        Worker user = (Worker) o;
+        return Objects.equals(id, user.id) &&
+            Objects.equals(name, user.name) &&
+            Objects.equals(address, user.address) &&
+            Objects.equals(phoneNumber, user.phoneNumber) &&
+            Objects.equals(email, user.email) &&
+            Objects.equals(summary, user.summary);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, address, phoneNumber, email, description);
+        return Objects.hash(id, name, address, phoneNumber, email, summary);
     }
 
     @Override
     public String toString() {
-        return "Company{" +
+        return "User{" +
             "id" + this.id +
             "name" + this.name +
             "address" + this.address +
+            "address" + this.address +
             "email" + this.email +
-            "phoneNumber" + this.phoneNumber +
-            "description" + this.description + "}";
+            "summary" + this.summary + "}";
     }
+
 }

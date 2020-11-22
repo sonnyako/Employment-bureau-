@@ -1,6 +1,5 @@
 package com.company.model;
 
-import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -11,10 +10,10 @@ import java.util.Objects;
 public class Contract {
     private Long id;
     private Company company;
-    private User worker;
+    private Worker worker;
     private Vacancy vacancy;
 
-    public Contract(Long id, Company company, User worker, Vacancy vacancy) {
+    public Contract(Long id, Company company, Worker worker, Vacancy vacancy) {
         this.id = id;
         this.company = company;
         this.worker = worker;
@@ -37,11 +36,11 @@ public class Contract {
         this.company = company;
     }
 
-    public User getWorker() {
+    public Worker getWorker() {
         return worker;
     }
 
-    public void setWorker(User worker) {
+    public void setWorker(Worker worker) {
         this.worker = worker;
     }
 
